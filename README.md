@@ -1,8 +1,16 @@
 # JS-RemoteFR-jurascripts-P1-4Fantascripts
 
-Création d'une nouvelle branche : dricks "cédric".
+Répartition du travail : 
+HTML / CSS : Paul/Sandrine
+Javascript : Cédric/Kevin
+===========================
 
-test pour un pull  //  le test fonctionne
+27/09/2023
+Création et élaboration du HTML (dans le but d'établir les classes)
++ choix des SVG pour les inputs 
 
-test de sandrine
+A faire dans le CSS : crée des variables pour les couleurs (thèmes ?) 
+EX : background / color / backgroundTODO
+
+
 
