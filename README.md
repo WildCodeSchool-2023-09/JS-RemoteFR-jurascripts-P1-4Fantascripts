@@ -6,11 +6,19 @@ Javascript : Cédric/Kevin
 ===========================
 
 27/09/2023
-Création et élaboration du HTML (dans le but d'établir les classes)
+
+MATIN
+Live session : Kevin Paul Cédric Sandrine
+
++ Création et élaboration du HTML (dans le but d'établir les classes)
 + choix des SVG pour les inputs 
 
-A faire dans le CSS : crée des variables pour les couleurs (thèmes ?) 
-EX : background / color / backgroundTODO
+- A faire dans le CSS : crée des variables pour les couleurs (thèmes ?) (EX : background / color / backgroundTODO)
 
+APRES MIDI
+Live session HTML/CSS : Paul Sandrine
+HTML/CSS : Tout le début mise en page CSS / Début responsiv input,button / Création navBar,Boite à outils :`Compteur postit` / Footer / Body background
 
-
+Live session Js : Kevin Cédric
+Js : On essaye.
+    Découpage du code (Selecteur/écouteurs/fonction/Crée groupe li/ crée li)
