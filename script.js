@@ -16,6 +16,7 @@ const input = document.getElementById("input")
 
 // crée une zone de texte
 // envoyer son texte dans la "todolist" en liste
-// a chaque entrée de liste avoir une fonction pour "valider"(barre le texte) puis "supprimé"(bruit de papier qui se froisse ?) 
+// a chaque entrée de liste avoir une fonction pour "valider"(barre le texte) puis "supprimé"(bruit de papier qui se déchire?) 
 // ou si "supprimé(demande validation)"
 //
+
