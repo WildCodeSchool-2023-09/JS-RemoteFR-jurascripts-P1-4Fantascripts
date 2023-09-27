@@ -1,0 +1,49 @@
+<!--
+    dans le HEAD : 
+    rajouter des links pour le css, font awesome et pour la police (google font)
+    indiquer le titre 
+    
+    dans le BODY : 
+    
+    ajouter une navbar
+    logo
+    titre
+ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>To Do List</title>
+    <!-- link et je rajoute script -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Tout Doux</h1></header>
+    
+    <div class="container">
+      <ul class="todo"></ul>
+    </div>
+    <form>
+      <input type="text" class="input" placeholder="A Faire" />
+      <button class="button" type="submit">
+        <i class="fa-regular fa-square-plus"></i>
+      </button>
+    </div>
+    <div class="select">
+        <select name="category" class="filter-category">
+            <option value="all">Toutes les tâches</option>
+            <option value="achieved">Tâches accomplies</option>
+            <option value="standby">Tâches à faire</option>
+        </select>
+    </div>
+</form>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
