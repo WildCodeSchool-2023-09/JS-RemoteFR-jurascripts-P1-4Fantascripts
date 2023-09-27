@@ -2,4 +2,4 @@
 
 Création d'une nouvelle branche : dricks "cédric".
 
-test pour un pull
+test pour un pull  //  le test fonctionne
