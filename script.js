@@ -12,8 +12,6 @@ const input = document.getElementById("input")
 
 
 
-
-
 // TODOLIST
 
 // crée une zone de texte
