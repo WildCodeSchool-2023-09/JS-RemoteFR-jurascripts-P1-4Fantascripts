@@ -78,7 +78,7 @@ form button {
 
 form button:hover {
     background: white;
-    color: green;
+    color: #6f4c37;
 }
 
 select {
