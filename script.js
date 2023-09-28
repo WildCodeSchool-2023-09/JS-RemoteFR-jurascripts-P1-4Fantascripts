@@ -1,98 +1,43 @@
-// sélectionner le boutton effacé
-//const clear = document.getElementByClass("clear");
-// sélectionner l'élément avec l'id "date"
-//const dateElement = document.getElementByClass("date");
-// sélectionner la liste
-//C// const list = document.getElementByClass("todo");
-// sélectionner l'input, la saisie
+// TODO TASK MANAGER
 
-// // classe font awesome permettant d'obtenir le rond pour valider
-// const check = "fa-circle-check";
-// // classe font awesome permettant d'obtenir le rond validé
-// const unCheck = "fa-circle";
-// 
-// const trash = "fa-trash";
-// // classe font awesome permettant d'obtenir le +
-// const submit = "fa-square-plus";
+// const button = document.querySelector(".button");
+// const ul = document.querySelector(".todo");
 
-// TODOLIST
+// button.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   const input = document.querySelector(".input");
+//   const li = document.createElement("li");
+//   li.innerText = input.value;
+//   ul.appendChild(li);
+//   input.value = ``;
+// });
 
-// crée une zone de texte
-// envoyer son texte dans la "todolist" en liste
-// a chaque entrée de liste avoir une fonction pour :
-//          soit : "valider"(barre le texte) puis "supprimé"(bruit de papier qui se déchire?) 
-//          ou si "supprimé(demande validation)"
-//
-//
+const button = document.querySelector(`.button`);
+const ul = document.querySelector(`.todo`);
 
-
-
-// Les selecteurs
-//const input = document.querySelector(".input");
-const toDoList = document.querySelector(".todo");
-const button = document.querySelector(".button");
-const input = document.querySelector(".input")
+button.addEventListener(`click`, (e) => {
+  e.preventDefault();
+  const input = document.querySelector(`.input`);
+  const newTask = document.createElement(`li`);
+  newTask.classList.add(`newTask`)
+  newTask.innerText = input.value;
+  ul.appendChild(newTask);
+  input.value = ``;
+});
 
 
+// PAUL SOLUTION
+// button.addEventListener("click", addToDo);
 
+// function addToDo(e) {
+//   e.preventDefault();
 
-// Les écouteurs 
-button.addEventListener(`click`, );
-todoList
+//   const listDiv = document.createElement("div");
+//   const newTask = document.createElement("li");
+//   newTask.classLi st.add("task");
+//   newTask.innerText = input.value;
+//   listDiv.appendChild(newTask);
 
-
-
-// Les fonctions
-function addToDo(event) {
-    event.preventDefault();
-}
-
-
-// Crée le groupe des li
-const listDiv = document.createElement("div");
-listDiv.classList.add("task");
-
-
-
-
-
-
-// Création <li>
-const newList = document.createElement("li");
-newList
-
-
-function newList() {
-    let list = document.createElement("li");
-    let textList = document.querySelector(".input").value;
-    let t = document.createTextNode(textList);
-    listDiv.appendChild(list);
-    if (textList ==='') {
-    return alert("On ne peut pas rien avoir a faire ☺")
-} 
-} 
-
-
-
-//document.body.onload = addElement;
-
-// function newList(){
-//     let newLi = document.createElement("li");
-//     let newContent = document.createTextNode("input");
-//     newLi.appendChild(newContent);
-//     const currentLi = document.getElementByClass("todo");
-//     document.body.insertBefore(newLi, currentLi);
+//   toDoList.appendChild(listDiv);
+//   input.value = "";
 // }
-
-//Mettre bouton validé
-
-
-
-//Mettre le bouton supprimé
-
-
-
-
-// Section
-toDoList.appendChild(listDiv);
-input.value = '';
