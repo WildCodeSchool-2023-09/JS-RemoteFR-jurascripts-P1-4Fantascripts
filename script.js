@@ -19,11 +19,22 @@ button.addEventListener(`click`, (e) => {
   e.preventDefault();
   const input = document.querySelector(`.input`);
   const newTask = document.createElement(`li`);
-  newTask.classList.add(`newTask`)
+  newTask.classList.add(`newTask`);
   newTask.innerText = input.value;
   ul.appendChild(newTask);
   input.value = ``;
+
 });
+
+
+// filter-category classList:
+// newTask = Nouvelle li
+// newTaskCheck = Entrée li validé (text barré)
+// newTaskDel = Entrée li validé puis supprimé (opacité 100%)
+//
+// Toutes les tâches = newTask + newTaskCheck + newTaskDel
+// Tâche accomplies = newTaskDel + newTaskCheck
+// Tâches à faire = newTask
 
 
 // PAUL SOLUTION
