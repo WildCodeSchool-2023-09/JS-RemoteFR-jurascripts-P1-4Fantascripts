@@ -9,7 +9,7 @@ body {
        flex-direction: column;
        height: 100vh;
        background-image: url(img/parchemin.jpg);
-       background-size: cover;
+       background-size: center;
 } 
 /* nav */
 header {
@@ -40,6 +40,7 @@ nav>ul {
     list-style: none;
     font-size: 1.5rem;
     color: #4f2b1b;
+    text-shadow: 2px 2px 2px #B6A170;
 }
 
 /* nav>ul>li>a{
@@ -111,6 +112,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .todo {
@@ -119,6 +121,7 @@ footer {
 }
 
 .newTask {
+    
     background: #6f4c37;
     color: white;
     margin: 0.8rem;
