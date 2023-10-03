@@ -23,7 +23,6 @@ button.addEventListener(`click`, (e) => {
   newTask.innerText = input.value;
   ul.appendChild(newTask);
   input.value = ``;
-
 });
 
 

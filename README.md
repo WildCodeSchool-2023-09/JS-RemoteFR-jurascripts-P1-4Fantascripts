@@ -22,3 +22,17 @@ HTML/CSS : Tout le début mise en page CSS / Début responsiv input,button / Cr�
 Live session Js : Kevin Cédric
 Js : On essaye.
     Découpage du code (Selecteur/écouteurs/fonction/Crée groupe li/ crée li)
+
+28/09/2023
+
+MATIN
+Live session : Kevin Cédric Paul Sandrine
++ reprise du Js tous ensemble
+
+Merge des branches (HTML/CSS et Js)
++ Fonction liste OK.
+- Ajouter bouton validé et supprimé.
+- A faire partie Responsive
+
+
+03/10/2023
