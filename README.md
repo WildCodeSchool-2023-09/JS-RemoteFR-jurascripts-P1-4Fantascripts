@@ -33,6 +33,3 @@ Merge des branches (HTML/CSS et Js)
 + Fonction liste OK.
 - Ajouter bouton validé et supprimé.
 - A faire partie Responsive
-
-
-03/10/2023
