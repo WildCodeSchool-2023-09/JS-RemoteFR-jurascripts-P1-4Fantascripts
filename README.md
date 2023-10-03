@@ -5,6 +5,7 @@ HTML / CSS : Paul/Sandrine
 Javascript : Cédric/Kevin
 
 ===========================
+
 27/09/2023
 MATIN
 Live session : Kevin Paul Cédric Sandrine
@@ -26,6 +27,7 @@ Live session Js : Kevin Cédric
   Découpage du code (Selecteur/écouteurs/fonction/Crée groupe li/ crée li)
 
 ===========================
+
 28/09/2023
 MATIN
 Live session : Kevin Cédric Paul Sandrine
@@ -36,6 +38,7 @@ Live session : Kevin Cédric Paul Sandrine
 - A faire partie Responsive
 
 ===========================
+
 03/10/2023
 APRES MIDI
 + Finalisation Js + LocalStorage
