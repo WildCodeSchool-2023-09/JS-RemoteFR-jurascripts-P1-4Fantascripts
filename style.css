@@ -20,6 +20,7 @@
 body {
        display: flex;
        flex-direction: column;
+       margin: 5px;
        height: 100vh;
        background-image: url(img/parchemin.jpg);
        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -100,6 +101,7 @@ form button {
  }
 
 form input {
+    max-width: 50%;
     border-top-left-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
 }
@@ -149,7 +151,7 @@ footer {
 
 footer>p {
     color: var(--color-h1);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .date {
@@ -221,4 +223,20 @@ background: var(--background-hover);
 .transighost{
     transform: translateX(16rem);
     opacity: 0;
+}
+
+@media  screen and (max-width: 600px) {
+    
+
+
+}
+@media  screen and (max-width: 360px) {
+    
+    nav>h1 {
+        font-size: 1.5rem;
+    }
+    nav h1,
+    nav ul{
+        margin: 0.5rem;
+    }
 }
