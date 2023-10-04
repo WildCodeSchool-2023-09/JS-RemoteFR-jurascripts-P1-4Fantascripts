@@ -11,30 +11,30 @@
     --color-hover : #6f4c37;
     --background-hover : #dacbcb;
     --primary-transition: all 0.5s ease;
-    --background-image : url(img/wooden.jpg);
+    --delete : #d14c4c;
+    --shadow-hover : #b3944c;
+    --shadow : #0f0f0f;
+
 }
 
 body {
        display: flex;
        flex-direction: column;
        height: 100vh;
-       background-image: var(--background-image);
-       background-size: center;
+       background-image: url(img/parchemin.jpg);
        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} 
+}
 /* nav */
 header {
     display: flex;
     height: 10vh;
-    
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: last baseline;
     width: 100vw;
-
 }
 
 nav h1,
@@ -44,20 +44,44 @@ nav ul {
 
 nav>h1 {
     font-size: 2.5rem;
-    color: var(--color-h1);
+    color: var(--background-hover);
 }
 
-nav>ul {
+nav>div>ul {
     list-style: none;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 2px #dacbcb;
-
 }
 
-/* nav>ul>li>a{
-
+a {
     text-decoration: none;
-} */
+    font-size: 1.5rem;
+    color: var(--background-hover);
+}
+
+a:hover {
+    text-shadow: 2px 2px 2px var(--shadow-hover);
+}
+
+.counter-position {
+    display: flex;
+    align-items: center;
+}
+
+.counter {
+    color: var(--background-hover);
+}
+
+.fa-refresh {
+    padding-right: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--delete);
+    text-shadow: 2px 2px 2px var(--shadow);
+    transition: .3s;
+}
+.fa-refresh:hover {
+    text-shadow: 2px 2px 2px var(--shadow-hover);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
 
 form {
     display: flex;
@@ -84,7 +108,6 @@ form button {
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
     cursor: pointer;
-    
 }
 
 form button:hover {
@@ -102,7 +125,6 @@ select {
     margin: 0.5rem;
     cursor: pointer;
     text-decoration: none;
-    
 }
 
 .select {
@@ -117,20 +139,29 @@ main {
 }
 
 footer {
-    display: flex;   
-    justify-content: flex-end;
-    width: 100vw;
-    height: 5vh;
-    padding: 0.5rem;
-    color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    padding: .5rem;
+}
+
+footer>p {
+    color: var(--color-h1);
     font-size: 1rem;
+}
+
+.date {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: var(--color-h1);
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;    
-
+    align-items: center;
 }
 
 .todo {
