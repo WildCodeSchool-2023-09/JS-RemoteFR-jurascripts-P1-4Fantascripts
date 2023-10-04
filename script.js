@@ -9,26 +9,44 @@ const filterList = document.querySelector(".filter-category");
 //ECOUTEURS
 
 todoList.addEventListener(`click`, checkDelete);
+
 filterList.addEventListener("input", filterCategory);
 
-
-//FONCTIONS
-
 clear.addEventListener("click", function(){
-  localStorage.clear();
   location.reload();
 });
 
 button.addEventListener(`click`, (e) => {
   e.preventDefault();
+  const input = document.querySelector(`.input`);
+  createHtmlTask(input.value);
+  
+  localStorage.setItem(input.value, 0);
+  todoCounter();
+  input.value = ``;
+});
 
+//FONCTIONS
+
+function getAllStorage() {
+  const archive = []
+  const keys = Object.keys(localStorage)
+
+  for (let i = 0; i < keys.length; i++) {
+    archive.push({taskName: keys[i], state: localStorage.getItem(keys[i])})
+  }
+
+  return archive;
+}
+
+function createHtmlTask (taskName) {
+  
   const listTask = document.createElement("listTask")
   listTask.classList.add("task")
 
-  const input = document.querySelector(`.input`);
   const newTask = document.createElement(`li`);
   newTask.classList.add(`newTask`)
-  newTask.innerText = input.value;
+  newTask.innerText = taskName;
   listTask.appendChild(newTask);
 
   const confirmButton = document.createElement("button")
@@ -42,8 +60,8 @@ button.addEventListener(`click`, (e) => {
   listTask.appendChild(deleteButton)
 
   todoList.appendChild(listTask)
-  input.value = ``;
-});
+};
+
 
 
 function checkDelete(event) {
@@ -52,14 +70,15 @@ function checkDelete(event) {
 
   if (item.classList.contains("check-btn")) {
     task.classList.add("achieved");
+    todoCounter();
 
   } else if (item.classList.contains("delete-btn")) {
     task.classList.add("transighost");
     task.addEventListener("transitionend", function () {
       task.remove();
+      todoCounter()
     });
   }
-  todoCounter();
 }
 
 function filterCategory(e) {
@@ -91,14 +110,17 @@ function filterCategory(e) {
 
 // MAJ les compteurs dans localStorage
 
+let achievedCount = 0;
+let standbyCount = 0;
+
 function todoCounter() {
   const counterAchieved = document.getElementById("counter-achieved");
   const counterStandby = document.getElementById("counter-standby");
   const tasks = todoList.querySelectorAll(".task");
   const clearButton = document.getElementById("clear-button");
 
-  let achievedCount = 0;
-  let standbyCount = 0;
+  achievedCount = 0;
+  standbyCount = 0;
 
   tasks.forEach((task) => {
     if (task.classList.contains("achieved")) {
@@ -114,28 +136,34 @@ function todoCounter() {
   counterAchieved.textContent = achievedCount;
   counterStandby.textContent = standbyCount;
 
-
   // Ajout du bouton Clear pour refresh les compteurs
 
   clearButton.addEventListener("click", () => {
-    localStorage.setItem("achievedCount", 0);
-    localStorage.setItem("standbyCount", 0);
-
+    localStorage.setItem("achievedCount", achievedCount);
+    localStorage.setItem("standbyCount", standbyCount);
+    localStorage.clear();
     counterAchieved.textContent = 0;
     counterStandby.textContent = 0;
   });
 }
 
+// chargement de la page 
 
-document.addEventListener("contentCounter", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const counterAchieved = document.getElementById("counter-achieved");
   const counterStandby = document.getElementById("counter-standby");
   const counters = getCounter();
+  const data = getAllStorage();
+
+  data.forEach((Element) => {
+    createHtmlTask(Element.taskName)
+  }) 
 
   counterAchieved.textContent = counters.achievedCount;
   counterStandby.textContent = counters.standbyCount;
 
 });
+
 
 // pour récupérer les compteurs du localStorage
 
