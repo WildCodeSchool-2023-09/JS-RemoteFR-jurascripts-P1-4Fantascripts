@@ -14,6 +14,11 @@ filterList.addEventListener("input", filterCategory);
 
 //FONCTIONS
 
+clear.addEventListener("click", function(){
+  localStorage.clear();
+  location.reload();
+});
+
 button.addEventListener(`click`, (e) => {
   e.preventDefault();
 
@@ -140,3 +145,10 @@ function getCounter() {
   const standbyCount = localStorage.getItem("standbyCount") || 0;
   return { achievedCount: parseInt(achievedCount), standbyCount: parseInt(standbyCount) };
 }
+
+// ajout de la date
+
+const dateElement = document.getElementById("date");
+const options = {weekday : "long", month:"long", day:"numeric"};
+const today = new Date();
+dateElement.innerHTML = today.toLocaleDateString("fr-FR", options);

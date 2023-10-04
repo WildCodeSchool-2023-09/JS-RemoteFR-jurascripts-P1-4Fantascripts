@@ -12,57 +12,55 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" /> <!-- link et je rajoute script -->
-    <title>To Do List</title>
-  </head>
-
-
-  <body>
-    <header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" /> <!-- link et je rajoute script -->
+  <title>To Do List</title>
+</head> 
+ 
+<body>
+  <header>
     <nav>
-        <h1>Tout Doux</h1>
-        <li>
-          <button id="clear-button" class="clear-btn">
+      <h1>Tout Doux</h1>
+        <a href="404.html" target="_blank" >Boite à outils</a>
+        <div class="counter-position">
+          <div id="clear-button" class="clear-btn">
             <i class="fa fa-refresh"></i>
-          </button>
-        </li>
-        <ul>
-            <li><span id="counter-achieved">0</span> accomplies</li>
-            <li><span id="counter-standby">0</span> à faire</li>
-        </ul>
+          </div>
+          <ul>
+            <li class="counter" ><span class="counter" id="counter-achieved">0</span> accomplies</li>
+            <li class="counter" ><span class="counter" id="counter-standby">0</span> à faire</li>
+          </ul>
+        </div>
     </nav>
-    </header>
-
-    <main>
+  </header> 
+  <main>
     <form>
       <input type="text" class="input" placeholder="Ecris ta tâche ici">
       <button class="button" type="submit">
         <i class="fa-regular fa-square-plus"></i>
       </button>
-        </div>
         <div class="select">
-            <select name="category" class="filter-category">
-                <option value="all">Toutes les tâches</option>
-                <option value="achieved">Tâches accomplies</option>
-                <option value="standby">Tâches à faire</option>
-            </select>
+          <select name="category" class="filter-category">
+            <option value="all">Toutes les tâches</option>
+            <option value="achieved">Tâches accomplies</option>
+            <option value="standby">Tâches à faire</option>
+          </select>
         </div>
-    </form>
-
+        <div class="clear" id="clear">
+          <p class="fa fa-refresh"></p>
+        </div>
+    </form> 
     <div class="container">
       <ul class="todo"></ul>
     </div>
   </main>
   <footer>
-      © 2023 Les 4 FantaScrîpts Sandrine, Cédric, Kevin, Paul
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    <p class="date" id="date"></p>
+    <p>© 2023 Les 4 FantaScrîpts Sandrine, Cédric, Kevin, Paul</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>
-
-
-
