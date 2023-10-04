@@ -11,14 +11,14 @@
     --color-hover : #6f4c37;
     --background-hover : #dacbcb;
     --primary-transition: all 0.5s ease;
-
+    --background-image : url(img/wooden.jpg);
 }
 
 body {
        display: flex;
        flex-direction: column;
        height: 100vh;
-       background-image: url(img/parchemin.jpg);
+       background-image: var(--background-image);
        background-size: center;
        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
@@ -50,7 +50,7 @@ nav>h1 {
 nav>ul {
     list-style: none;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 2px #B6A170;
+    text-shadow: 2px 2px 2px #dacbcb;
 
 }
 
