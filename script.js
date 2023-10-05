@@ -17,9 +17,9 @@ allTaskBtn.addEventListener('click', showAllCategory);
 achievedTaskBtn.addEventListener('click', showAchievedCategory);
 standbyTaskBtn.addEventListener('click', showStandByCategory);
 
-clear.addEventListener("click", function(){
-  location.reload();
-});
+// clear.addEventListener("click", function(){
+//   location.reload();
+// });
 
 button.addEventListener(`click`, (e) => {
   e.preventDefault();

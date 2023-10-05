@@ -20,7 +20,6 @@
 body {
        display: flex;
        flex-direction: column;
-       margin: 5px;
        height: 100vh;
        background-image: url(img/parchemin.jpg);
        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -101,7 +100,6 @@ form button {
  }
 
 form input {
-    max-width: 50%;
     border-top-left-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
 }
@@ -217,7 +215,7 @@ footer {
 
 footer>p {
     color: var(--color-h1);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .date {
@@ -292,11 +290,26 @@ background: var(--background-hover);
 }
 
 @media screen and (max-width: 780px) {
+    nav>h1 {
+        font-size: 2rem;
+    }
+
+    a {
+        display: none;
+    }
+
+    .clear {
+        margin: 2px;
+    }
     input{
             float: none;
             width: 60%;
            
           } 
+
+          form button {
+            margin-right: 9px;
+        }
       
         .select {
             display: none;
@@ -333,5 +346,69 @@ background: var(--background-hover);
             color: var(--color-hover);
             cursor: pointer;
         }
+
+        footer {
+            display: block;
+        }
+
+        footer>p {
+            font-size: 0.6rem;
+        }
+        
+        .date {
+            text-transform: capitalize;
+            font-size: 1rem;
+        }
             
-    }    
+    }
+
+@media screen and (max-width: 380px) {
+
+    nav {
+        align-items: center;
+    }
+
+    nav>h1 {
+        font-size: 1.1rem;
+    }
+
+    nav h1,
+    nav ul {
+        margin: 3px;
+    }
+
+    form {
+        min-height: 8vh;
+    }
+
+    form input,
+    form button,
+    .task {
+    font-size: 0.8rem;
+    }
+
+    form button {
+        margin-right: 9px;
+    }
+
+    .fa-refresh {
+        font-size: 1rem;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        width: 23px;
+        height: 2px;
+    }
+
+    .check-btn,
+    .delete-btn {
+        padding: 0.2rem;
+    }
+
+    .todo {
+        min-width: 90vw;
+    }
+
+    }
