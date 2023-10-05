@@ -11,7 +11,9 @@ const standbyTaskBtn = document.querySelector("#standby-task");
 //ECOUTEURS
 
 todoList.addEventListener(`click`, checkDelete);
+
 filterList.addEventListener("input", filterCategoryHandler);
+
 allTaskBtn.addEventListener('click', showAllCategory);
 achievedTaskBtn.addEventListener('click', showAchievedCategory);
 standbyTaskBtn.addEventListener('click', showStandByCategory);
