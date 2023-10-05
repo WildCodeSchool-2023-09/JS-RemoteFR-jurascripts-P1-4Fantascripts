@@ -4,13 +4,18 @@
 const button = document.querySelector(`.button`);
 const todoList = document.querySelector(`.todo`);
 const filterList = document.querySelector(".filter-category");
-
+const allTaskBtn = document.querySelector("#all-task");
+const achievedTaskBtn = document.querySelector("#achieved-task");
+const standbyTaskBtn = document.querySelector("#standby-task");
 
 //ECOUTEURS
 
 todoList.addEventListener(`click`, checkDelete);
 
 filterList.addEventListener("input", filterCategory);
+allTaskBtn.addEventListener('click', showAllCategory);
+achievedTaskBtn.addEventListener('click', showAchievedCategory);
+standbyTaskBtn.addEventListener('click', showStandByCategory);
 
 clear.addEventListener("click", function(){
   location.reload();
@@ -80,6 +85,23 @@ function checkDelete(event) {
     });
   }
 }
+
+// Fonction de traitement de l'évenement lors du clic sur le select
+function filterCategoryHandler(e) {
+  // Appel de la fonction de filtrage avec la valeur de l'évenement
+  filterCategory(e.target.value)
+}
+
+function showAllCategory(){
+  filterCategory("all")
+}
+function showAchievedCategory(){
+  filterCategory("achieved")
+}
+function showStandByCategory(){
+  filterCategory("standby")
+}
+
 
 function filterCategory(e) {
   const tasks = todoList.querySelectorAll(".task");
@@ -180,3 +202,5 @@ const dateElement = document.getElementById("date");
 const options = {weekday : "long", month:"long", day:"numeric"};
 const today = new Date();
 dateElement.innerHTML = today.toLocaleDateString("fr-FR", options);
+
+
