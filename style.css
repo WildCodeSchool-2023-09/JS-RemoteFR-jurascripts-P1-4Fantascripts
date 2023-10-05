@@ -163,7 +163,7 @@ select {
   #menu-toggle {
     display: none;
   }
-  
+
   .menu-button,
   .menu-button::before,
   .menu-button::after {

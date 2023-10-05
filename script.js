@@ -12,7 +12,8 @@ const standbyTaskBtn = document.querySelector("#standby-task");
 
 todoList.addEventListener(`click`, checkDelete);
 
-filterList.addEventListener("input", filterCategory);
+filterList.addEventListener("input", filterCategoryHandler);
+
 allTaskBtn.addEventListener('click', showAllCategory);
 achievedTaskBtn.addEventListener('click', showAchievedCategory);
 standbyTaskBtn.addEventListener('click', showStandByCategory);
@@ -38,8 +39,10 @@ function getAllStorage() {
   const keys = Object.keys(localStorage)
 
   for (let i = 0; i < keys.length; i++) {
+    if (keys[i] !== "achievedCount" && keys[i] !== "standbyCount"){
     archive.push({taskName: keys[i], state: localStorage.getItem(keys[i])})
   }
+}
 
   return archive;
 }
@@ -103,12 +106,12 @@ function showStandByCategory(){
 }
 
 
-function filterCategory(e) {
+function filterCategory(value) {
   const tasks = todoList.querySelectorAll(".task");
 
   tasks.forEach(function (task) {
 
-    switch (e.target.value) {
+    switch (value) {
       case "all":
         task.style.display = "flex";
         break;
@@ -132,6 +135,7 @@ function filterCategory(e) {
 
 // MAJ les compteurs dans localStorage
 
+const clearButton = document.getElementById("clear-button");
 let achievedCount = 0;
 let standbyCount = 0;
 
@@ -139,7 +143,7 @@ function todoCounter() {
   const counterAchieved = document.getElementById("counter-achieved");
   const counterStandby = document.getElementById("counter-standby");
   const tasks = todoList.querySelectorAll(".task");
-  const clearButton = document.getElementById("clear-button");
+  
 
   achievedCount = 0;
   standbyCount = 0;
@@ -158,16 +162,15 @@ function todoCounter() {
   counterAchieved.textContent = achievedCount;
   counterStandby.textContent = standbyCount;
 
-  // Ajout du bouton Clear pour refresh les compteurs
-
-  clearButton.addEventListener("click", () => {
-    localStorage.setItem("achievedCount", achievedCount);
-    localStorage.setItem("standbyCount", standbyCount);
-    localStorage.clear();
-    counterAchieved.textContent = 0;
-    counterStandby.textContent = 0;
-  });
 }
+
+  // Ajout du bouton Clear pour refresh les compteurs
+clearButton.addEventListener("click", () => {
+  localStorage.clear();
+  console.log("toto");
+  location.reload()
+  console.log("toto")
+});
 
 // chargement de la page 
 
