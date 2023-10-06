@@ -240,7 +240,7 @@ select {
 }
 
 .todo {
-    width: 90%;
+    width: 60%;
     margin: auto;
     list-style: none;
 }
@@ -426,7 +426,7 @@ footer>p {
     }
 
     .todo {
-        width: 60%;
+        width: 30%;
     }
 
     main {
@@ -434,7 +434,7 @@ footer>p {
     }
 
     input {
-        max-width: 60%;
+        max-width: 30%;
     }
 
     .select {
